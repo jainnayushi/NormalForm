@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Please Enter the details</h1>
+        <form onsubmit="return display(event);" enctype="multipart/form-data">
+            <div class="grid-container">
+                <label for="name" class="item1">Name</label>
+                <input type="text" class="item2" id="name" required>
+
+                <label for="dob" class="item3">Date of Birth</label>
+                <input type="date" class="item4" id="dob" required>
+
+                <label for="address" class="item5">Address</label>
+                <textarea name="address" id="address" class="item6" required></textarea>
+
+                <label for="branch" class="item7">Select Branch</label>
+                <select name="branch" id="branch" class="item8">
+                    <option value="" readonly>Select</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="hydreabad">Hydreabad</option>
+                    <option value="mumbai">Mumbai</option>
+                </select>
+
+                <label for="email" class="item9">Email</label>
+                <input type="email" name="email" id="email" class="item10" required>
+
+                <div class="grid-inner-container item11">
+                    <label for="gender" class="grid-item1">Gender:</label>
+                    <input type="radio" name="gender" value="male" class="grid-item2">
+                    <label for="male" class="grid-item3">Male</label>
+                    <input type="radio" name="gender" value="male" class="grid-item4">
+                    <label for="female" class="grid-item5">Female</label>
+                </div>
+
+
+                <label for="mobile" class="item12">Mobile Number</label>
+                <input type="text" name="mobile" id="mobile" class="item13" required>
+
+                <label for="image" class="item14">Upload Photo</label>
+                <input type="file" accept="image/*" name="image" id="image-file" class="item15" required>
+
+
+                <button type="submit" value="submit" class="item16 btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <img src="" id="image">
+    <div id="result"></div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
